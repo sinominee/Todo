@@ -5,3 +5,6 @@ from .models import Todo
 @admin.register(Todo)
 class TaskAdmin(admin.ModelAdmin):
     list_display = ('name', 'status')
+    list_filter = ('status',)
+    list_editable = ('status',)
+    search_fields = ('name',)
